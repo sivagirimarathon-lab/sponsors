@@ -1,0 +1,2523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivagiri Marathon 2026 — Partner for Impact</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --blue-deep: #0a1628;
+            --blue-dark: #0f2847;
+            --blue-mid: #1a5da6;
+            --blue-bright: #2e8de6;
+            --blue-light: #e8f2fc;
+            --green-main: #22c55e;
+            --green-dark: #16a34a;
+            --green-light: #dcfce7;
+            --yellow: #fbbf24;
+            --yellow-bright: #fde047;
+            --orange: #f97316;
+            --white: #ffffff;
+            --off-white: #f8fafc;
+            --grey-100: #f1f5f9;
+            --grey-200: #e2e8f0;
+            --grey-400: #94a3b8;
+            --grey-600: #475569;
+            --grey-800: #1e293b;
+            --red-accent: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--grey-800);
+            background: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ========== UTILITY ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-pad {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .badge-green {
+            background: var(--green-light);
+            color: var(--green-dark);
+        }
+
+        .badge-blue {
+            background: var(--blue-light);
+            color: var(--blue-mid);
+        }
+
+        .badge-yellow {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .section-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--blue-bright);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--blue-deep);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 17px;
+            color: var(--grey-600);
+            line-height: 1.6;
+            max-width: 640px;
+        }
+
+        /* ========== TOPBAR ========== */
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 22, 40, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s;
+        }
+
+        .topbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .topbar-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topbar-logo .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--green-main);
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            font-size: 16px;
+        }
+
+        .topbar-nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .topbar-nav a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .topbar-nav a:hover {
+            color: var(--white);
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, var(--green-main), #16a34a);
+            color: var(--white);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(34, 197, 94, 0.35);
+            transition: all 0.3s;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(34, 197, 94, 0.5);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            background: transparent;
+            color: var(--blue-mid);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 100px;
+            border: 2px solid var(--blue-mid);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--blue-mid);
+            color: var(--white);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--blue-deep);
+            overflow: hidden;
+            padding-top: 64px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 70% 40%, rgba(30, 90, 180, 0.25), transparent),
+                radial-gradient(ellipse 50% 50% at 20% 80%, rgba(34, 197, 94, 0.12), transparent),
+                radial-gradient(ellipse 40% 40% at 90% 10%, rgba(251, 191, 36, 0.08), transparent);
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .hero-left {}
+
+        .hero-edition {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 100px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--yellow);
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-edition .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green-main);
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5.5vw, 64px);
+            font-weight: 900;
+            line-height: 1.05;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--green-main), var(--yellow-bright));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle-line {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(16px, 2.5vw, 24px);
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+
+        .hero-theme {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+            margin-bottom: 32px;
+        }
+
+        .hero-theme span {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--green-main);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 36px;
+        }
+
+        .hero-stat {
+            text-align: left;
+        }
+
+        .hero-stat-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-actions .btn-cta {
+            padding: 14px 32px;
+            font-size: 15px;
+        }
+
+        .hero-actions .btn-ghost {
+            padding: 14px 32px;
+            font-size: 15px;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .hero-actions .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--white);
+        }
+
+        /* Hero right — visual card stack */
+        .hero-right {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 460px;
+        }
+
+        .hero-visual-card {
+            position: absolute;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-card-1 {
+            width: 300px;
+            height: 380px;
+            background: linear-gradient(160deg, #1a5da6, #0f2847);
+            z-index: 3;
+            transform: rotate(-2deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-card-1 .card-runner-svg {
+            margin-bottom: 20px;
+        }
+
+        .hero-card-1 .card-event {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--white);
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .hero-card-1 .card-date {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--yellow);
+            margin-top: 8px;
+        }
+
+        .hero-card-1 .card-badge-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .hero-card-1 .card-badge-item {
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-card-2 {
+            width: 240px;
+            height: 160px;
+            background: var(--white);
+            z-index: 2;
+            top: -10px;
+            right: -60px;
+            transform: rotate(8deg);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card2-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--grey-400);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card2-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--green-main);
+            margin-top: 4px;
+        }
+
+        .card2-sub {
+            font-size: 13px;
+            color: var(--grey-600);
+            margin-top: 2px;
+        }
+
+        .hero-card-3 {
+            width: 240px;
+            height: 140px;
+            background: linear-gradient(135deg, var(--green-main), #16a34a);
+            z-index: 1;
+            bottom: -10px;
+            left: -50px;
+            transform: rotate(-8deg);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card3-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card3-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--white);
+            margin-top: 4px;
+        }
+
+        .card3-sub {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 2px;
+        }
+
+        /* ========== TRUST BAR ========== */
+        .trust-bar {
+            background: var(--off-white);
+            border-top: 1px solid var(--grey-200);
+            border-bottom: 1px solid var(--grey-200);
+            padding: 28px 0;
+        }
+
+        .trust-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            font-size: 18px;
+        }
+
+        .trust-icon-blue {
+            background: var(--blue-light);
+        }
+
+        .trust-icon-green {
+            background: var(--green-light);
+        }
+
+        .trust-icon-yellow {
+            background: #fef3c7;
+        }
+
+        .trust-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--grey-800);
+        }
+
+        .trust-sub {
+            font-size: 12px;
+            color: var(--grey-400);
+        }
+
+        /* ========== EVENT INFO ========== */
+        .event-section {
+            background: var(--white);
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .event-details-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .event-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 20px;
+            background: var(--off-white);
+            border-radius: 14px;
+            border: 1px solid var(--grey-200);
+            transition: all 0.3s;
+        }
+
+        .event-detail-item:hover {
+            background: var(--blue-light);
+            border-color: var(--blue-bright);
+            transform: translateX(4px);
+        }
+
+        .edi-icon {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            font-size: 20px;
+            background: var(--white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .edi-content h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--blue-deep);
+        }
+
+        .edi-content p {
+            font-size: 13px;
+            color: var(--grey-600);
+            margin-top: 2px;
+            line-height: 1.5;
+        }
+
+        /* Reach Map Visual */
+        .reach-map {
+            position: relative;
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-dark));
+            border-radius: 24px;
+            padding: 36px;
+            overflow: hidden;
+            min-height: 420px;
+        }
+
+        .reach-map-bg {
+            position: absolute;
+            inset: 0;
+            opacity: 0.06;
+            background-image:
+                radial-gradient(circle at 30% 50%, var(--green-main) 2px, transparent 2px),
+                radial-gradient(circle at 70% 30%, var(--yellow) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 50% 80%, var(--blue-bright) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .reach-map h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--white);
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .reach-states {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+        }
+
+        .reach-state {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            transition: all 0.3s;
+        }
+
+        .reach-state:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateX(4px);
+        }
+
+        .reach-state-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .reach-state h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--white);
+            flex: 1;
+        }
+
+        .reach-state p {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .reach-clubs-note {
+            margin-top: 20px;
+            padding: 14px 18px;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+        }
+
+        .reach-clubs-note p {
+            font-size: 13px;
+            color: var(--green-main);
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        /* ========== NUMBERS / IMPACT ========== */
+        .impact-section {
+            background: var(--blue-deep);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .impact-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 60% at 30% 40%, rgba(34, 197, 94, 0.08), transparent),
+                radial-gradient(ellipse 50% 50% at 80% 70%, rgba(46, 141, 230, 0.08), transparent);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+
+        .impact-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.4s;
+        }
+
+        .impact-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .impact-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            margin: 0 auto 16px;
+            display: grid;
+            place-items: center;
+            font-size: 24px;
+        }
+
+        .impact-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .impact-num .suffix {
+            font-size: 24px;
+            color: var(--green-main);
+        }
+
+        .impact-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        /* ========== ROI SECTION ========== */
+        .roi-section {
+            background: var(--off-white);
+        }
+
+        .roi-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .roi-chart-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--grey-200);
+        }
+
+        .roi-chart-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--blue-deep);
+            margin-bottom: 24px;
+        }
+
+        .roi-bar-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .roi-bar-item {}
+
+        .roi-bar-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+
+        .roi-bar-label span:first-child {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--grey-800);
+        }
+
+        .roi-bar-label span:last-child {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--blue-mid);
+        }
+
+        .roi-bar-track {
+            height: 28px;
+            background: var(--grey-100);
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .roi-bar-fill {
+            height: 100%;
+            border-radius: 14px;
+            transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+            width: 0;
+        }
+
+        .roi-bar-fill.animated {
+            /* set via JS */
+        }
+
+        .roi-compare-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--grey-200);
+        }
+
+        .roi-compare-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--grey-100);
+            align-items: center;
+        }
+
+        .roi-compare-row:last-child {
+            border: none;
+        }
+
+        .roi-compare-row.header {
+            font-weight: 700;
+            font-size: 12px;
+            color: var(--grey-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .roi-compare-row .channel {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--grey-800);
+        }
+
+        .roi-compare-row .cost {
+            font-size: 14px;
+            color: var(--grey-600);
+        }
+
+        .roi-compare-row .reach {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .roi-compare-row .reach.good {
+            color: var(--green-main);
+        }
+
+        .roi-compare-row .reach.avg {
+            color: var(--orange);
+        }
+
+        .roi-compare-row .reach.poor {
+            color: var(--red-accent);
+        }
+
+        .roi-winner {
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, var(--green-light), #bbf7d0);
+            border-radius: 14px;
+            border: 1px solid var(--green-main);
+        }
+
+        .roi-winner p {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--green-dark);
+        }
+
+        /* ========== TIERS ========== */
+        .tiers-section {
+            background: var(--white);
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .tier-card {
+            background: var(--white);
+            border-radius: 20px;
+            border: 2px solid var(--grey-200);
+            overflow: hidden;
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+        }
+
+        .tier-card.featured {
+            border-color: var(--blue-bright);
+            box-shadow: 0 8px 32px rgba(46, 141, 230, 0.15);
+            background: var(--blue-deep);
+        }
+
+        .tier-card.featured .tier-header {
+            background: linear-gradient(135deg, var(--blue-mid), var(--blue-deep));
+        }
+
+        .tier-popular {
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 4px 16px;
+            background: var(--orange);
+            color: var(--white);
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 0 0 8px 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tier-header {
+            padding: 28px 20px 20px;
+            background: var(--off-white);
+            text-align: center;
+        }
+
+        .tier-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--blue-deep);
+        }
+
+        .tier-card.featured .tier-name {
+            color: var(--white);
+        }
+
+        .tier-price {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 28px;
+            color: var(--blue-mid);
+            margin-top: 8px;
+        }
+
+        .tier-card.featured .tier-price {
+            color: var(--yellow);
+        }
+
+        .tier-price-sub {
+            font-size: 12px;
+            color: var(--grey-400);
+            font-weight: 400;
+        }
+
+        .tier-card.featured .tier-price-sub {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .tier-body {
+            padding: 20px;
+        }
+
+        .tier-benefits {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .tier-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--grey-600);
+        }
+
+        .tier-check {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--green-light);
+            display: grid;
+            place-items: center;
+            font-size: 10px;
+            color: var(--green-main);
+            margin-top: 1px;
+        }
+
+        .tier-footer {
+            padding: 0 20px 24px;
+            text-align: center;
+        }
+
+        .tier-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            border: 2px solid var(--blue-mid);
+            color: var(--blue-mid);
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .tier-btn:hover {
+            background: var(--blue-mid);
+            color: var(--white);
+        }
+
+        .tier-card.featured .tier-btn {
+            background: linear-gradient(135deg, var(--green-main), #16a34a);
+            border-color: var(--green-main);
+            color: var(--white);
+            box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+        }
+
+        /* ========== NON-MONETARY ========== */
+        .nonmon-section {
+            background: var(--off-white);
+        }
+
+        .nonmon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 36px;
+        }
+
+        .nonmon-card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 28px 24px;
+            border: 1px solid var(--grey-200);
+            transition: all 0.3s;
+        }
+
+        .nonmon-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .nonmon-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        .nonmon-card h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--blue-deep);
+            margin-bottom: 8px;
+        }
+
+        .nonmon-card .you-give {
+            font-size: 13px;
+            color: var(--grey-600);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .nonmon-card .you-get {
+            font-size: 13px;
+            color: var(--green-dark);
+            font-weight: 600;
+            padding: 8px 12px;
+            background: var(--green-light);
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+
+        /* ========== RACE CATEGORIES ========== */
+        .categories-section {
+            background: var(--white);
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-top: 36px;
+        }
+
+        .cat-card {
+            background: var(--off-white);
+            border-radius: 16px;
+            padding: 24px 16px;
+            text-align: center;
+            border: 1px solid var(--grey-200);
+            transition: all 0.3s;
+        }
+
+        .cat-card:hover {
+            border-color: var(--blue-bright);
+            transform: translateY(-3px);
+        }
+
+        .cat-dist {
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--blue-mid);
+        }
+
+        .cat-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--grey-800);
+            margin-top: 4px;
+        }
+
+        .cat-price {
+            font-size: 12px;
+            color: var(--grey-400);
+            margin-top: 6px;
+        }
+
+        .cat-tag {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 3px 10px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .cat-tag-fun {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .cat-tag-chip {
+            background: var(--green-light);
+            color: var(--green-dark);
+        }
+
+        /* ========== TIMELINE ========== */
+        .timeline-section {
+            background: linear-gradient(180deg, var(--blue-deep), var(--blue-dark));
+            position: relative;
+        }
+
+        .timeline-track {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--green-main);
+            border: 3px solid var(--blue-deep);
+            z-index: 2;
+        }
+
+        .timeline-content {
+            width: 44%;
+            padding: 20px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+        }
+
+        .timeline-content h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--yellow);
+            margin-bottom: 4px;
+        }
+
+        .timeline-content p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.5;
+        }
+
+        /* ========== CTA ========== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--green-main), #16a34a);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.08;
+            background-image:
+                radial-gradient(circle, var(--white) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .cta-inner {
+            position: relative;
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .cta-inner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .cta-inner p {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .cta-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .cta-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 12px;
+        }
+
+        .cta-contact-item span {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .cta-btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 40px;
+            background: var(--white);
+            color: var(--green-dark);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 16px;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s;
+        }
+
+        .cta-btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--blue-deep);
+            padding: 32px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-right {
+                display: none;
+            }
+
+            .event-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .roi-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tiers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .topbar-nav {
+                display: none;
+            }
+
+            .tiers-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .nonmon-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cat-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timeline-line {
+                left: 16px;
+            }
+
+            .timeline-dot {
+                left: 16px;
+            }
+
+            .timeline-content {
+                width: 100%;
+                margin-left: 40px;
+            }
+
+            .cta-contacts {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* ========== COUNTER ANIM ========== */
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-logo">
+                <img src="./assects/marathon.png" alt="Marathon Logo" style="height: 50px; width: auto; display: block; border-radius: 6px; background-color: white; padding: 4px;">
+                <span style="margin-left: 8px;">Sivagiri Marathon</span>
+            </div>
+            <div class="topbar-nav">
+                <a href="#about">About</a>
+                <a href="#impact">Impact</a>
+                <a href="#roi">ROI</a>
+                <a href="#packages">Packages</a>
+                <a href="#partner">Partner</a>
+                <a href="#contact" class="btn-cta">Become a Sponsor →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-edition">
+                    <span class="dot"></span>
+                    4th Edition • 21 June 2026
+                </div>
+                <h1 class="hero-title">
+                    Run With<br><span class="highlight">Purpose.</span><br>Partner for<br><span
+                        class="highlight">Impact.</span>
+                </h1>
+                <p class="hero-subtitle-line">Sivagiri Marathon — By the Runners, For the Runners</p>
+                <div class="hero-theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+                        <path d="M8 12l3 3 5-5" />
+                    </svg>
+                    <span>Save Water, Save Nature • Professionally Executed by NovaRace</span>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-num" data-count="2000">0</div>
+                        <div class="hero-stat-label">Runners Expected</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-num" data-count="5000">0</div>
+                        <div class="hero-stat-label">Live Spectators</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">3L<span class="suffix">+</span></div>
+                        <div class="hero-stat-label">Digital Reach</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">3</div>
+                        <div class="hero-stat-label">States Covered</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#packages" class="btn-cta">View Sponsorship Packages →</a>
+                    <a href="#contact" class="btn-ghost">Talk to Us</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-visual-card hero-card-1">
+                    <div class="card-runner-svg">
+                        <img src="./assects/runners.png" alt="Runners Logo" style="width: 100%; max-width: 220px; height: auto; object-fit: contain; margin-bottom: 16px; background-color: white; padding: 12px; border-radius: 8px;" />
+                    </div>
+                    <div class="card-event">SIVAGIRI<br>MARATHON</div>
+                    <div class="card-date">4th Edition • 21 June 2026 • Erode</div>
+                    <div class="card-badge-row">
+                        <span class="card-badge-item">5K</span>
+                        <span class="card-badge-item">10K</span>
+                        <span class="card-badge-item">21.1K</span>
+                        <span class="card-badge-item">42.2K</span>
+                    </div>
+                </div>
+                <div class="hero-visual-card hero-card-2">
+                    <div class="card2-label">Digital Impressions</div>
+                    <div class="card2-value">3,00,000+</div>
+                    <div class="card2-sub">Social media, email, WhatsApp & press</div>
+                </div>
+                <div class="hero-visual-card hero-card-3">
+                    <div class="card3-label">Tri-State Reach</div>
+                    <div class="card3-value">TN • KL • KA</div>
+                    <div class="card3-sub">Runners from 3 states</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-inner container">
+            <div class="trust-item">
+                <div class="trust-icon trust-icon-green">🏅</div>
+                <div>
+                    <div class="trust-text">RFID Chip Timing</div>
+                    <div class="trust-sub">All races professionally timed</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon trust-icon-blue">🚀</div>
+                <div>
+                    <div class="trust-text">Powered by NovaRace</div>
+                    <div class="trust-sub">India's leading race tech partner</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon trust-icon-blue">📜</div>
+                <div>
+                    <div class="trust-text">Section 8 Non-Profit</div>
+                    <div class="trust-sub">80G Tax Receipts Issued</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon trust-icon-yellow">📡</div>
+                <div>
+                    <div class="trust-text">Live Tracking</div>
+                    <div class="trust-sub">Real-time runner updates</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon trust-icon-green">🌊</div>
+                <div>
+                    <div class="trust-text">Save Water, Save Nature</div>
+                    <div class="trust-sub">Community impact theme</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EVENT INFO & REACH -->
+    <section id="about" class="event-section section-pad">
+        <div class="container">
+            <div class="event-grid">
+                <div class="fade-up">
+                    <span class="section-label">About the Event</span>
+                    <h2 class="section-title">South India's Most<br>Heart-Warming Marathon</h2>
+                    <p class="section-subtitle">1,000 runners in 2023. 1,500 in 2024. 1,500 again in 2025. Now in its
+                        4th edition, the Sivagiri Marathon has become Erode district's most loved sporting event. In
+                        2026, we expect 2,000+ participants from across three states — professionally timed and
+                        executed.</p>
+                    <div class="event-details-list">
+                        <div class="event-detail-item">
+                            <div class="edi-icon">📅</div>
+                            <div class="edi-content">
+                                <h4>21 June 2026 (Sunday)</h4>
+                                <p>Race day with 2-day Race Expo on 20–21 June</p>
+                            </div>
+                        </div>
+                        <div class="event-detail-item">
+                            <div class="edi-icon">📍</div>
+                            <div class="edi-content">
+                                <h4>Sivagiri, Erode District, Tamil Nadu</h4>
+                                <p>A scenic town with strong community support and a passion for running</p>
+                            </div>
+                        </div>
+                        <div class="event-detail-item">
+                            <div class="edi-icon">🏃</div>
+                            <div class="edi-content">
+                                <h4>4 Professionally Timed Race Categories</h4>
+                                <p>5K, 10K, Half Marathon & Full Marathon — all with RFID chip timing by NovaRace</p>
+                            </div>
+                        </div>
+                        <div class="event-detail-item">
+                            <div class="edi-icon">💰</div>
+                            <div class="edi-content">
+                                <h4>Affordable for Everyone</h4>
+                                <p>5K from ₹499, Full Marathon at only ₹799 — includes T-shirt, medal & refreshments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reach Map -->
+                <div class="reach-map fade-up">
+                    <div class="reach-map-bg"></div>
+                    <h3>🗺️ Runners Coming from 3 States</h3>
+                    <div class="reach-states">
+                        <div class="reach-state">
+                            <div class="reach-state-dot" style="background: var(--orange);"></div>
+                            <div>
+                                <h4>All Over Tamil Nadu</h4>
+                                <p>Erode, Coimbatore, Salem, Chennai, Trichy, Madurai & more — all leading running clubs
+                                    across Tamil Nadu are confirmed to participate</p>
+                            </div>
+                        </div>
+                        <div class="reach-state">
+                            <div class="reach-state-dot" style="background: var(--green-main);"></div>
+                            <div>
+                                <h4>Kerala</h4>
+                                <p>Runners from Palakkad, Thrissur, Kochi and other cities crossing borders for this
+                                    event</p>
+                            </div>
+                        </div>
+                        <div class="reach-state">
+                            <div class="reach-state-dot" style="background: var(--blue-bright);"></div>
+                            <div>
+                                <h4>Karnataka</h4>
+                                <p>Bengaluru, Mysuru and South Karnataka running communities joining the movement</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reach-clubs-note">
+                        <p>🏆 All leading Running Clubs across Tamil Nadu are going to participate — from Chennai
+                            Runners to Coimbatore Running Club, this is where the running community gathers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT NUMBERS -->
+    <section id="impact" class="impact-section section-pad">
+        <div class="container">
+            <div class="text-center fade-up" style="margin-bottom: 48px;">
+                <span class="section-label" style="color: var(--green-main);">By The Numbers</span>
+                <h2 class="section-title" style="color: var(--white);">Your Brand Reaches<br>Thousands of People</h2>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card fade-up">
+                    <div class="impact-icon" style="background: rgba(34,197,94,0.15);">🏃</div>
+                    <div class="impact-num"><span class="counter" data-target="2000">0</span><span
+                            class="suffix">+</span></div>
+                    <div class="impact-label">Registered Runners</div>
+                </div>
+                <div class="impact-card fade-up">
+                    <div class="impact-icon" style="background: rgba(251,191,36,0.15);">👨‍👩‍👧‍👦</div>
+                    <div class="impact-num"><span class="counter" data-target="5000">0</span><span
+                            class="suffix">+</span></div>
+                    <div class="impact-label">Spectators on Race Day</div>
+                </div>
+                <div class="impact-card fade-up">
+                    <div class="impact-icon" style="background: rgba(46,141,230,0.15);">📱</div>
+                    <div class="impact-num">3<span class="suffix"> Lakh+</span></div>
+                    <div class="impact-label">Digital Engagements</div>
+                </div>
+                <div class="impact-card fade-up">
+                    <div class="impact-icon" style="background: rgba(249,115,22,0.15);">🗺️</div>
+                    <div class="impact-num"><span class="counter" data-target="3">0</span></div>
+                    <div class="impact-label">States (TN, KL, KA)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST & TRANSPARENCY -->
+    <section class="section-pad"
+        style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-top: 3px solid var(--green-main); border-bottom: 3px solid var(--green-main);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+                <div class="fade-up">
+                    <div
+                        style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: var(--white); border: 1px solid var(--green-main); border-radius: 100px; margin-bottom: 16px;">
+                        <span style="font-size: 14px;">🛡️</span>
+                        <span
+                            style="font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700; color: var(--green-dark); letter-spacing: 1px; text-transform: uppercase;">100%
+                            Transparent</span>
+                    </div>
+                    <h2 class="section-title" style="color: var(--green-dark);">Your Money is Safe.<br>Every Rupee is
+                        Tracked.</h2>
+                    <p style="font-size: 16px; color: var(--grey-600); line-height: 1.7; margin-bottom: 20px;">Sivagiri
+                        Marathon is <strong>proudly owned and promoted by Sivagiri Runners</strong> — an officially
+                        registered <strong>Non-Profit Section 8 Company</strong>. We are not a commercial event company.
+                        We are runners who organise for runners.</p>
+                    <p style="font-size: 16px; color: var(--grey-600); line-height: 1.7;">Every sponsorship contribution
+                        is receipted under <strong style="color: var(--green-dark);">Section 80G</strong> of the Income
+                        Tax Act — which means your donation is tax-deductible and every single rupee is accounted for.
+                        Nothing goes untracked.</p>
+                </div>
+                <div class="fade-up">
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <!-- 80G Card -->
+                        <div
+                            style="background: var(--white); border-radius: 20px; padding: 28px; border: 2px solid var(--green-main); box-shadow: 0 8px 32px rgba(34,197,94,0.12);">
+                            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+                                <div
+                                    style="width: 56px; height: 56px; border-radius: 14px; background: linear-gradient(135deg, var(--green-main), #16a34a); display: grid; place-items: center; font-size: 24px; color: white; font-family: 'Outfit', sans-serif; font-weight: 900;">
+                                    80G</div>
+                                <div>
+                                    <div
+                                        style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 18px; color: var(--blue-deep);">
+                                        Tax-Deductible Donations</div>
+                                    <div style="font-size: 13px; color: var(--grey-600);">Official 80G receipts for all
+                                        sponsorship amounts</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="color: var(--green-main); font-weight: 700;">✓</span>
+                                    <span style="font-size: 14px; color: var(--grey-800);">Registered Section 8
+                                        Non-Profit Company</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="color: var(--green-main); font-weight: 700;">✓</span>
+                                    <span style="font-size: 14px; color: var(--grey-800);">80G certificate issued for
+                                        every contribution</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="color: var(--green-main); font-weight: 700;">✓</span>
+                                    <span style="font-size: 14px; color: var(--grey-800);">Complete financial
+                                        transparency — every rupee accounted</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="color: var(--green-main); font-weight: 700;">✓</span>
+                                    <span style="font-size: 14px; color: var(--grey-800);">Post-event impact report
+                                        shared with all sponsors</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tagline Card -->
+                        <div
+                            style="background: var(--blue-deep); border-radius: 16px; padding: 24px; text-align: center;">
+                            <div
+                                style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; color: var(--white); margin-bottom: 6px;">
+                                By the Runners, For the Runners.</div>
+                            <div style="font-size: 14px; color: rgba(255,255,255,0.6);">Organised with runners kept at
+                                heart at every step.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI SECTION -->
+    <section id="roi" class="roi-section section-pad">
+        <div class="container">
+            <div class="text-center fade-up" style="margin-bottom: 48px;">
+                <span class="section-label">Return on Investment</span>
+                <h2 class="section-title">More Visibility Per Rupee<br>Than Any Other Channel</h2>
+                <p class="section-subtitle" style="margin: 12px auto 0;">Compare sponsoring the Sivagiri Marathon
+                    against traditional advertising — the numbers speak clearly.</p>
+            </div>
+            <div class="roi-grid">
+                <!-- Bar Chart -->
+                <div class="roi-chart-card fade-up">
+                    <div class="roi-chart-title">Brand Visibility — Cost vs Reach</div>
+                    <div class="roi-bar-group">
+                        <div class="roi-bar-item">
+                            <div class="roi-bar-label"><span>Sivagiri Marathon (₹5K–3L)</span><span>3,00,000+
+                                    people</span></div>
+                            <div class="roi-bar-track">
+                                <div class="roi-bar-fill" data-width="95%"
+                                    style="background: linear-gradient(90deg, var(--green-main), #16a34a);"></div>
+                            </div>
+                        </div>
+                        <div class="roi-bar-item">
+                            <div class="roi-bar-label"><span>Local Newspaper Ad (₹50K)</span><span>50,000 readers</span>
+                            </div>
+                            <div class="roi-bar-track">
+                                <div class="roi-bar-fill" data-width="35%"
+                                    style="background: linear-gradient(90deg, var(--orange), #ea580c);"></div>
+                            </div>
+                        </div>
+                        <div class="roi-bar-item">
+                            <div class="roi-bar-label"><span>Radio Ad – 1 week (₹75K)</span><span>80,000
+                                    listeners</span></div>
+                            <div class="roi-bar-track">
+                                <div class="roi-bar-fill" data-width="42%"
+                                    style="background: linear-gradient(90deg, var(--yellow), #f59e0b);"></div>
+                            </div>
+                        </div>
+                        <div class="roi-bar-item">
+                            <div class="roi-bar-label"><span>Local TV Ad – 1 week (₹1.5L)</span><span>1,00,000
+                                    viewers</span></div>
+                            <div class="roi-bar-track">
+                                <div class="roi-bar-fill" data-width="50%"
+                                    style="background: linear-gradient(90deg, var(--blue-bright), #1d4ed8);"></div>
+                            </div>
+                        </div>
+                        <div class="roi-bar-item">
+                            <div class="roi-bar-label"><span>Hoarding / Banner (₹30K/mo)</span><span>20,000
+                                    passersby</span></div>
+                            <div class="roi-bar-track">
+                                <div class="roi-bar-fill" data-width="20%"
+                                    style="background: linear-gradient(90deg, #a78bfa, #7c3aed);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Table -->
+                <div class="roi-compare-card fade-up">
+                    <div class="roi-chart-title">Why Marathon Sponsorship Wins</div>
+                    <div class="roi-compare-row header">
+                        <span>Channel</span><span>You Pay</span><span>What You Get</span>
+                    </div>
+                    <div class="roi-compare-row">
+                        <span class="channel">🏃 Marathon</span>
+                        <span class="cost">₹5K–3L</span>
+                        <span class="reach good">Logo on 2000 T-shirts, medals, banners, BIBs + 3L digital reach + Race
+                            Expo stall + press coverage for weeks</span>
+                    </div>
+                    <div class="roi-compare-row">
+                        <span class="channel">📰 Newspaper</span>
+                        <span class="cost">₹50K</span>
+                        <span class="reach avg">One-day ad, people see for 5 seconds and turn the page</span>
+                    </div>
+                    <div class="roi-compare-row">
+                        <span class="channel">📻 Radio</span>
+                        <span class="cost">₹75K</span>
+                        <span class="reach avg">30-second spot, no visual branding, forgotten quickly</span>
+                    </div>
+                    <div class="roi-compare-row">
+                        <span class="channel">📺 Local TV</span>
+                        <span class="cost">₹1.5L+</span>
+                        <span class="reach poor">Expensive, people skip ads, no face-to-face connection</span>
+                    </div>
+                    <div class="roi-compare-row">
+                        <span class="channel">🪧 Hoarding</span>
+                        <span class="cost">₹30K/mo</span>
+                        <span class="reach poor">Static, one location, no engagement or leads</span>
+                    </div>
+                    <div class="roi-winner">
+                        <p>✅ Marathon Sponsorship = Your logo worn by thousands, seen by lakhs, remembered for years.
+                            Plus you meet customers face-to-face at the Race Expo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSORSHIP TIERS -->
+    <section id="packages" class="tiers-section section-pad">
+        <div class="container">
+            <div class="text-center fade-up" style="margin-bottom: 8px;">
+                <span class="section-label">Sponsorship Packages</span>
+                <h2 class="section-title">Choose Your Level of Impact</h2>
+                <p class="section-subtitle" style="margin: 8px auto 0;">Every package gives your business maximum
+                    visibility. Pick what suits your budget. <strong style="color: var(--green-dark);">All contributions
+                        receive 80G tax-deductible receipts.</strong></p>
+            </div>
+
+            <!-- Lightweight Tier Cards -->
+            <div class="tiers-grid" style="grid-template-columns: repeat(5, 1fr);">
+
+                <!-- Title -->
+                <div class="tier-card featured fade-up">
+                    <span class="tier-popular">🔥 Only 1 Slot</span>
+                    <div class="tier-header">
+                        <div class="tier-name">Title Sponsor</div>
+                        <div class="tier-price">₹2–3 Lakhs</div>
+                        <div class="tier-price-sub">1 Exclusive Slot</div>
+                    </div>
+                    <div class="tier-body" style="padding: 18px 20px;">
+                        <p style="font-size: 13px; color: rgba(255,255,255,0.85); line-height: 1.6;">Your brand becomes
+                            THE name of the marathon. Logo everywhere. Premium Expo stall. 10 VIP passes. Speaking slot.
+                            Full arch branding. Top billing in all press & media.</p>
+                    </div>
+                    <div class="tier-footer">
+                        <a href="#contact" class="tier-btn">Claim Title Sponsorship →</a>
+                    </div>
+                </div>
+
+                <!-- Gold -->
+                <div class="tier-card fade-up" style="border-color: #fbbf24;">
+                    <div class="tier-header" style="background: linear-gradient(135deg, #fef3c7, #fde68a);">
+                        <div class="tier-name" style="color: #92400e;">🥇 Gold Sponsor</div>
+                        <div class="tier-price" style="color: #b45309;">₹1.5–2 Lakhs</div>
+                        <div class="tier-price-sub">2–3 Slots</div>
+                    </div>
+                    <div class="tier-body" style="padding: 18px 20px;">
+                        <p style="font-size: 13px; color: var(--grey-600); line-height: 1.6;">High visibility across all
+                            materials. Premium Expo stall. 5 VIP passes. Multiple social media posts. Press coverage.
+                            Partial arch branding. Email blast mention.</p>
+                    </div>
+                    <div class="tier-footer">
+                        <a href="#contact" class="tier-btn" style="border-color: #b45309; color: #b45309;">Become Gold
+                            Sponsor →</a>
+                    </div>
+                </div>
+
+                <!-- Silver -->
+                <div class="tier-card fade-up" style="border-color: #94a3b8;">
+                    <div class="tier-header" style="background: linear-gradient(135deg, #f1f5f9, #e2e8f0);">
+                        <div class="tier-name" style="color: #475569;">🥈 Silver Sponsor</div>
+                        <div class="tier-price" style="color: #475569;">₹50K–1 Lakh</div>
+                        <div class="tier-price-sub">4–6 Slots</div>
+                    </div>
+                    <div class="tier-body" style="padding: 18px 20px;">
+                        <p style="font-size: 13px; color: var(--grey-600); line-height: 1.6;">Logo on banners, posters,
+                            T-shirts & website. Standard Expo stall. 3 VIP passes. Social media mention. Option to own a
+                            race category (5K / 10K / HM / FM).</p>
+                    </div>
+                    <div class="tier-footer">
+                        <a href="#contact" class="tier-btn">Become Silver Sponsor →</a>
+                    </div>
+                </div>
+
+                <!-- Bronze -->
+                <div class="tier-card fade-up" style="border-color: #d97706;">
+                    <div class="tier-header" style="background: linear-gradient(135deg, #fef3c7, #fed7aa);">
+                        <div class="tier-name" style="color: #92400e;">🥉 Bronze Sponsor</div>
+                        <div class="tier-price" style="color: #92400e;">₹25K–50K</div>
+                        <div class="tier-price-sub">8–12 Slots</div>
+                    </div>
+                    <div class="tier-body" style="padding: 18px 20px;">
+                        <p style="font-size: 13px; color: var(--grey-600); line-height: 1.6;">Logo on website & banners.
+                            Social media mention. Shared Expo stall. Finisher badge logo. Certificate of appreciation.
+                            Perfect for local businesses.</p>
+                    </div>
+                    <div class="tier-footer">
+                        <a href="#contact" class="tier-btn" style="border-color: #92400e; color: #92400e;">Become Bronze
+                            Sponsor →</a>
+                    </div>
+                </div>
+
+                <!-- Expo Stall -->
+                <div class="tier-card fade-up" style="border-color: var(--green-main);">
+                    <div class="tier-header" style="background: linear-gradient(135deg, var(--green-light), #bbf7d0);">
+                        <div class="tier-name" style="color: var(--green-dark);">🏪 Expo Stall</div>
+                        <div class="tier-price" style="color: var(--green-dark);">₹5K–10K</div>
+                        <div class="tier-price-sub">10–15 Local Vendor Slots</div>
+                    </div>
+                    <div class="tier-body" style="padding: 18px 20px;">
+                        <p style="font-size: 13px; color: var(--grey-600); line-height: 1.6;">Your own stall at the
+                            2-day Race Expo. Sell directly to 2,000+ runners & 5,000+ spectators. Name on website &
+                            social media. Most affordable entry.</p>
+                    </div>
+                    <div class="tier-footer">
+                        <a href="#contact" class="tier-btn"
+                            style="border-color: var(--green-dark); color: var(--green-dark);">Book Your Stall →</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FULL COMPARISON TABLE -->
+            <div class="fade-up" style="margin-top: 48px;">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <h3
+                        style="font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--blue-deep);">
+                        Sponsor Benefits at a Glance</h3>
+                    <p style="font-size: 14px; color: var(--grey-400); margin-top: 4px;">Compare what each tier gets —
+                        every ✓ is real brand visibility</p>
+                </div>
+                <div
+                    style="overflow-x: auto; border-radius: 16px; border: 1px solid var(--grey-200); box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 13px; min-width: 800px;">
+                        <thead>
+                            <tr>
+                                <th
+                                    style="text-align: left; padding: 16px 18px; background: var(--blue-deep); color: var(--white); font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 13px; width: 30%; border-right: 1px solid rgba(255,255,255,0.1);">
+                                    Sponsor Benefit</th>
+                                <th
+                                    style="text-align: center; padding: 16px 10px; background: var(--blue-deep); color: var(--yellow); font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 12px; border-right: 1px solid rgba(255,255,255,0.1); width: 14%;">
+                                    TITLE<br><span
+                                        style="font-weight: 400; font-size: 10px; color: rgba(255,255,255,0.5);">₹2–3L</span>
+                                </th>
+                                <th
+                                    style="text-align: center; padding: 16px 10px; background: var(--blue-deep); color: #fde68a; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 12px; border-right: 1px solid rgba(255,255,255,0.1); width: 14%;">
+                                    GOLD<br><span
+                                        style="font-weight: 400; font-size: 10px; color: rgba(255,255,255,0.5);">₹1.5–2L</span>
+                                </th>
+                                <th
+                                    style="text-align: center; padding: 16px 10px; background: var(--blue-deep); color: #cbd5e1; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 12px; border-right: 1px solid rgba(255,255,255,0.1); width: 14%;">
+                                    SILVER<br><span
+                                        style="font-weight: 400; font-size: 10px; color: rgba(255,255,255,0.5);">₹50K–1L</span>
+                                </th>
+                                <th
+                                    style="text-align: center; padding: 16px 10px; background: var(--blue-deep); color: #fed7aa; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 12px; border-right: 1px solid rgba(255,255,255,0.1); width: 14%;">
+                                    BRONZE<br><span
+                                        style="font-weight: 400; font-size: 10px; color: rgba(255,255,255,0.5);">₹25–50K</span>
+                                </th>
+                                <th
+                                    style="text-align: center; padding: 16px 10px; background: var(--blue-deep); color: #86efac; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 12px; width: 14%;">
+                                    EXPO STALL<br><span
+                                        style="font-weight: 400; font-size: 10px; color: rgba(255,255,255,0.5);">₹5–10K</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="compTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Slots urgency bar -->
+            <div class="fade-up"
+                style="margin-top: 32px; padding: 20px 28px; background: linear-gradient(135deg, #fef2f2, #fee2e2); border: 1px solid #fca5a5; border-radius: 16px; text-align: center;">
+                <p style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 16px; color: #dc2626;">⚡
+                    Limited Slots Available — Title Sponsor has only 1 slot. Once taken, it's gone.</p>
+                <p style="font-size: 13px; color: #991b1b; margin-top: 4px;">Total sponsorship slots across all tiers:
+                    only 26–37 businesses. Don't wait — call us today.</p>
+                <p style="font-size: 13px; color: var(--green-dark); margin-top: 8px; font-weight: 600;">🛡️ All
+                    sponsorship amounts receive official 80G tax-deductible receipts from Sivagiri Runners (Section 8
+                    Non-Profit).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NON-MONETARY PARTNERSHIPS -->
+    <section id="partner" class="nonmon-section section-pad">
+        <div class="container">
+            <div class="text-center fade-up" style="margin-bottom: 8px;">
+                <span class="section-label">Non-Monetary Partnerships</span>
+                <h2 class="section-title">No Cash Budget? No Problem.<br>Partner With Products or Services.</h2>
+                <p class="section-subtitle" style="margin: 8px auto 0;">If your business can provide supplies or
+                    services instead of money, you still get full brand visibility. Here's how:</p>
+            </div>
+            <div class="nonmon-grid">
+                <div class="nonmon-card fade-up">
+                    <div class="nonmon-icon" style="background: var(--blue-light);">💧</div>
+                    <h4>Hydration Partner</h4>
+                    <p class="you-give"><strong>You give:</strong> Water, electrolyte drinks or bottles for 2,000+
+                        runners</p>
+                    <div class="you-get">✅ You get: Logo on water stations, social media shout-outs, website recognition
+                    </div>
+                </div>
+                <div class="nonmon-card fade-up">
+                    <div class="nonmon-icon" style="background: #fce7f3;">🏥</div>
+                    <h4>Medical Partner</h4>
+                    <p class="you-give"><strong>You give:</strong> First-aid kits, medical staff or ambulance support
+                    </p>
+                    <div class="you-get">✅ You get: Logo on medical tents, event signage, digital mentions across all
+                        channels</div>
+                </div>
+                <div class="nonmon-card fade-up">
+                    <div class="nonmon-icon" style="background: #fef3c7;">🍌</div>
+                    <h4>Nutrition Partner</h4>
+                    <p class="you-give"><strong>You give:</strong> Energy bars, bananas, fruits or post-race snacks</p>
+                    <div class="you-get">✅ You get: Logo on refreshment stations, signage, social media & digital
+                        promotions</div>
+                </div>
+                <div class="nonmon-card fade-up">
+                    <div class="nonmon-icon" style="background: var(--green-light);">👕</div>
+                    <h4>Merchandise Partner</h4>
+                    <p class="you-give"><strong>You give:</strong> T-shirts, medals or swag bag items at cost</p>
+                    <div class="you-get">✅ You get: Logo on all merchandise, social media mentions, website recognition
+                    </div>
+                </div>
+                <div class="nonmon-card fade-up">
+                    <div class="nonmon-icon" style="background: #ede9fe;">📻</div>
+                    <h4>Media / Radio Partner</h4>
+                    <p class="you-give"><strong>You give:</strong> Promote event via your radio station, newspaper or
+                        social media</p>
+                    <div class="you-get">✅ You get: Logo on all promotional materials, website, event-day shout-outs
+                    </div>
+                </div>
+                <div class="nonmon-card fade-up">
+                    <div class="nonmon-icon" style="background: #e0f2fe;">🖨️</div>
+                    <h4>Print Partner</h4>
+                    <p class="you-give"><strong>You give:</strong> Printing for posters, banners, certificates or BIBs
+                    </p>
+                    <div class="you-get">✅ You get: Logo on all printed materials, social media features, event
+                        recognition</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RACE CATEGORIES -->
+    <section class="categories-section section-pad">
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-label">Race Categories</span>
+                <h2 class="section-title">All Races Professionally Timed — By the Runners, For the Runners</h2>
+                <p class="section-subtitle" style="margin: 8px auto 0;">Every race category in 2026 is professionally
+                    timed with RFID chip technology by <strong>NovaRace</strong> — a leading Race Technology partner in
+                    India.</p>
+            </div>
+            <div class="cat-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="cat-card">
+                    <div class="cat-dist">5K</div>
+                    <div class="cat-name">Community Run</div>
+                    <div class="cat-price">₹499</div>
+                    <span class="cat-tag cat-tag-chip">RFID Timed</span>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-dist">10K</div>
+                    <div class="cat-name">Challenge Run</div>
+                    <div class="cat-price">₹599</div>
+                    <span class="cat-tag cat-tag-chip">RFID Timed</span>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-dist">21.1K</div>
+                    <div class="cat-name">Half Marathon</div>
+                    <div class="cat-price">₹699</div>
+                    <span class="cat-tag cat-tag-chip">RFID Timed</span>
+                </div>
+                <div class="cat-card"
+                    style="border-color: var(--yellow); background: linear-gradient(135deg, #fffbeb, var(--off-white));">
+                    <div class="cat-dist" style="color: var(--orange);">42.2K</div>
+                    <div class="cat-name" style="font-weight: 800;">Full Marathon</div>
+                    <div class="cat-price">₹799</div>
+                    <span class="cat-tag cat-tag-chip" style="background: #fef3c7; color: #b45309;">🏆 RFID Timed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMOTION TIMELINE -->
+    <section class="timeline-section section-pad">
+        <div class="container">
+            <div class="text-center fade-up" style="margin-bottom: 8px;">
+                <span class="section-label" style="color: var(--green-main);">Promotion Timeline</span>
+                <h2 class="section-title" style="color: var(--white);">Your Brand Gets Promoted for Weeks — Not Just One
+                    Day</h2>
+            </div>
+            <div class="timeline-track">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" style="margin-right: auto;">
+                        <h4>March – April 2026</h4>
+                        <p>Early announcements on social media with sponsor logos. Website goes live with sponsor
+                            branding. Press releases sent to local media.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" style="margin-left: auto;">
+                        <h4>May 2026</h4>
+                        <p>Registration push with sponsor-branded emails & WhatsApp campaigns reaching thousands.
+                            Posters and banners go up across Erode, Coimbatore, Salem.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" style="margin-right: auto;">
+                        <h4>June 1–20</h4>
+                        <p>Peak promotion — daily social media posts, influencer shout-outs, local newspaper coverage.
+                            Sponsor logos printed on T-shirts, BIBs, medals & certificates.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" style="margin-left: auto;">
+                        <h4>20–21 June (Race Expo + Race Day)</h4>
+                        <p>2-day Race Expo with your stall. Race day — your logo on the arch, banners, BIBs, T-shirts,
+                            medals. Announcer mentions. Live social media coverage.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content" style="margin-right: auto;">
+                        <h4>Post-Event (July)</h4>
+                        <p>Results pages, finisher badges, photo galleries, thank-you posts — all featuring sponsor
+                            logos. Press coverage recap. Impact report shared with sponsors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXECUTION -->
+    <section class="section-pad" style="background: var(--white);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+                <div class="fade-up">
+                    <span class="section-label">Professional Execution</span>
+                    <h2 class="section-title">You Are in Safer Hands.</h2>
+                    <p class="section-subtitle" style="margin-bottom: 24px;">Every step, every action at the Sivagiri
+                        Marathon is professionally curated and executed. We don't cut corners — we set the standard.</p>
+                    <div style="display: flex; flex-direction: column; gap: 14px;">
+                        <div
+                            style="display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: var(--blue-light); border-radius: 14px; border-left: 4px solid var(--blue-mid);">
+                            <div style="font-size: 24px;">🏁</div>
+                            <div>
+                                <div
+                                    style="font-weight: 700; font-size: 15px; color: var(--blue-deep); font-family: 'Outfit', sans-serif;">
+                                    Powered by NovaRace</div>
+                                <div style="font-size: 13px; color: var(--grey-600); margin-top: 2px;">India's leading
+                                    Race Technology partner — RFID chip timing, live tracking, BIB management, results
+                                    publishing & finisher experiences</div>
+                            </div>
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: var(--green-light); border-radius: 14px; border-left: 4px solid var(--green-main);">
+                            <div style="font-size: 24px;">📡</div>
+                            <div>
+                                <div
+                                    style="font-weight: 700; font-size: 15px; color: var(--blue-deep); font-family: 'Outfit', sans-serif;">
+                                    All Races Professionally Timed</div>
+                                <div style="font-size: 13px; color: var(--grey-600); margin-top: 2px;">5K, 10K, Half
+                                    Marathon & Full Marathon — every runner gets accurate chip timing, live tracking &
+                                    e-certificates</div>
+                            </div>
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: #fef3c7; border-radius: 14px; border-left: 4px solid var(--yellow);">
+                            <div style="font-size: 24px;">🤝</div>
+                            <div>
+                                <div
+                                    style="font-weight: 700; font-size: 15px; color: var(--blue-deep); font-family: 'Outfit', sans-serif;">
+                                    By the Runners, For the Runners</div>
+                                <div style="font-size: 13px; color: var(--grey-600); margin-top: 2px;">Organised by
+                                    Sivagiri Runners — a community of 65+ passionate runners who live and breathe
+                                    running every single day</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Growth Chart -->
+                <div class="fade-up">
+                    <div
+                        style="background: var(--off-white); border-radius: 24px; padding: 32px; border: 1px solid var(--grey-200);">
+                        <div
+                            style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 18px; color: var(--blue-deep); margin-bottom: 24px;">
+                            📈 Growing Year After Year</div>
+                        <svg viewBox="0 0 500 300" style="width: 100%; height: auto;">
+                            <!-- Grid lines -->
+                            <line x1="60" y1="40" x2="60" y2="240" stroke="#e2e8f0" stroke-width="1" />
+                            <line x1="60" y1="240" x2="460" y2="240" stroke="#e2e8f0" stroke-width="1" />
+                            <line x1="60" y1="180" x2="460" y2="180" stroke="#e2e8f0" stroke-width="0.5"
+                                stroke-dasharray="4" />
+                            <line x1="60" y1="120" x2="460" y2="120" stroke="#e2e8f0" stroke-width="0.5"
+                                stroke-dasharray="4" />
+                            <line x1="60" y1="60" x2="460" y2="60" stroke="#e2e8f0" stroke-width="0.5"
+                                stroke-dasharray="4" />
+                            <!-- Y-axis labels -->
+                            <text x="50" y="244" text-anchor="end" font-size="11" fill="#94a3b8"
+                                font-family="Outfit">0</text>
+                            <text x="50" y="184" text-anchor="end" font-size="11" fill="#94a3b8"
+                                font-family="Outfit">500</text>
+                            <text x="50" y="124" text-anchor="end" font-size="11" fill="#94a3b8"
+                                font-family="Outfit">1,000</text>
+                            <text x="50" y="64" text-anchor="end" font-size="11" fill="#94a3b8"
+                                font-family="Outfit">1,500</text>
+                            <!-- 2000 line -->
+                            <line x1="60" y1="40" x2="460" y2="40" stroke="#22c55e" stroke-width="1"
+                                stroke-dasharray="6,3" opacity="0.5" />
+                            <text x="50" y="44" text-anchor="end" font-size="11" fill="#22c55e" font-family="Outfit"
+                                font-weight="700">2,000</text>
+                            <!-- Bars -->
+                            <!-- 2023 -->
+                            <rect x="90" y="120" width="70" height="120" rx="6" fill="#2e8de6" opacity="0.85">
+                                <animate attributeName="height" from="0" to="120" dur="0.8s" fill="freeze" />
+                                <animate attributeName="y" from="240" to="120" dur="0.8s" fill="freeze" />
+                            </rect>
+                            <text x="125" y="110" text-anchor="middle" font-size="14" fill="#0f2847"
+                                font-family="Outfit" font-weight="800">1,000</text>
+                            <text x="125" y="262" text-anchor="middle" font-size="12" fill="#475569"
+                                font-family="Outfit" font-weight="600">2023</text>
+                            <!-- 2024 -->
+                            <rect x="200" y="60" width="70" height="180" rx="6" fill="#1a5da6" opacity="0.9">
+                                <animate attributeName="height" from="0" to="180" dur="1s" fill="freeze" />
+                                <animate attributeName="y" from="240" to="60" dur="1s" fill="freeze" />
+                            </rect>
+                            <text x="235" y="50" text-anchor="middle" font-size="14" fill="#0f2847" font-family="Outfit"
+                                font-weight="800">1,500</text>
+                            <text x="235" y="262" text-anchor="middle" font-size="12" fill="#475569"
+                                font-family="Outfit" font-weight="600">2024</text>
+                            <!-- 2025 -->
+                            <rect x="310" y="60" width="70" height="180" rx="6" fill="#0f2847" opacity="0.9">
+                                <animate attributeName="height" from="0" to="180" dur="1.2s" fill="freeze" />
+                                <animate attributeName="y" from="240" to="60" dur="1.2s" fill="freeze" />
+                            </rect>
+                            <text x="345" y="50" text-anchor="middle" font-size="14" fill="#0f2847" font-family="Outfit"
+                                font-weight="800">1,500</text>
+                            <text x="345" y="262" text-anchor="middle" font-size="12" fill="#475569"
+                                font-family="Outfit" font-weight="600">2025</text>
+                            <!-- 2026 Target -->
+                            <rect x="420" y="40" width="70" height="200" rx="6" fill="#22c55e">
+                                <animate attributeName="height" from="0" to="200" dur="1.5s" fill="freeze" />
+                                <animate attributeName="y" from="240" to="40" dur="1.5s" fill="freeze" />
+                            </rect>
+                            <text x="455" y="30" text-anchor="middle" font-size="15" fill="#16a34a" font-family="Outfit"
+                                font-weight="900">2,000+</text>
+                            <text x="455" y="262" text-anchor="middle" font-size="12" fill="#16a34a"
+                                font-family="Outfit" font-weight="700">2026 🎯</text>
+                        </svg>
+                        <div style="text-align: center; margin-top: 12px; font-size: 13px; color: var(--grey-400);">
+                            Participant count by year — steady growth, strong community trust</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="cta-section section-pad">
+        <div class="cta-pattern"></div>
+        <div class="container">
+            <div class="cta-inner fade-up">
+                <h2>Ready to Put Your Brand<br>in Front of Thousands?</h2>
+                <p>Join hands with the Sivagiri Marathon 2026 — proudly owned by Sivagiri Runners, a registered Section
+                    8 Non-Profit. Your sponsorship money is receipted under 80G, fully tax-deductible, and every rupee
+                    is tracked. Whether you invest money or provide products, your business gets visibility that no
+                    newspaper ad can match.</p>
+                <div class="cta-contacts">
+                    <div class="cta-contact-item">
+                        <span>📞 +91 9788887888</span>
+                    </div>
+                    <div class="cta-contact-item">
+                        <span>✉️ Sivagirimarathon@gmail.com</span>
+                    </div>
+                    <div class="cta-contact-item">
+                        <span>🌐 www.sivagirimarathon.in</span>
+                    </div>
+                </div>
+                <a href="mailto:Sivagirimarathon@gmail.com?subject=Sponsorship%20Enquiry%20-%20Sivagiri%20Marathon%202026"
+                    class="cta-btn-white">
+                    Send Sponsorship Enquiry →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Sivagiri Marathon — Proudly Owned & Promoted by <a href="#">Sivagiri Runners</a> (Registered
+                Section 8 Non-Profit Company) &nbsp;|&nbsp; 80G Tax Receipts Issued &nbsp;|&nbsp; By the Runners, For
+                the Runners</p>
+        </div>
+    </footer>
+
+    <script>
+        // Build Comparison Table
+        (function () {
+            const check = '<span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#dcfce7;color:#16a34a;font-weight:700;font-size:12px;">✓</span>';
+            const cross = '<span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#fee2e2;color:#ef4444;font-weight:700;font-size:11px;">✗</span>';
+            const txt = (t) => `<span style="font-size:11px;font-weight:600;color:#475569;">${t}</span>`;
+
+            const rows = [
+                ['Logo in Sivagiri Marathon Main Logo', txt('Prominent'), cross, cross, cross, cross],
+                ['Logo on T-Shirt (Front/Back)', txt('Large (Front)'), txt('Medium (Back)'), txt('Small (Back)'), cross, cross],
+                ['Logo on Medal', check, check, cross, cross, cross],
+                ['Logo on Medal Lanyard', check, check, cross, cross, cross],
+                ['Logo on Certificate', check, check, check, cross, cross],
+                ['Logo on Finisher Badge', check, check, check, check, cross],
+                ['Logo on Website (with backlink)', txt('Top Placement'), txt('Mid Placement'), txt('Listed'), txt('Listed'), txt('Listed')],
+                ['Logo on Posters & Flyers', txt('Large'), txt('Medium'), txt('Small'), cross, cross],
+                ['Branding on Start/Finish Arch', txt('Full Arch'), txt('Partial'), cross, cross, cross],
+                ['Mention in Press/Media Coverage', txt('Featured'), txt('Mentioned'), check, cross, cross],
+                ['Social Media Promotion (Branded Posts)', txt('4+ Posts'), txt('2 Posts'), txt('1 Post'), txt('1 Mention'), txt('1 Mention')],
+                ['Dedicated Email Blast Mention', check, check, cross, cross, cross],
+                ['Stall at 2-Day Race Expo', txt('Premium'), txt('Premium'), txt('Standard'), txt('Shared'), txt('Own Stall')],
+                ['Announcer Mentions on Race Day', txt('Multiple'), txt('Multiple'), txt('Once'), cross, cross],
+                ['VIP Passes', txt('10'), txt('5'), txt('3'), txt('—'), txt('—')],
+                ['Speaking Slot at Opening Ceremony', check, cross, cross, cross, cross],
+                ['Exclusive Category Branding Rights', cross, cross, check, cross, cross],
+            ];
+
+            const tbody = document.getElementById('compTable');
+            rows.forEach((row, i) => {
+                const tr = document.createElement('tr');
+                const bg = i % 2 === 0 ? '#ffffff' : '#f8fafc';
+                row.forEach((cell, j) => {
+                    const td = document.createElement('td');
+                    td.style.cssText = `padding: 12px ${j === 0 ? '18px' : '10px'}; background: ${bg}; border-bottom: 1px solid #f1f5f9; ${j === 0 ? 'text-align:left;font-weight:600;color:#1e293b;font-size:13px;border-right:1px solid #e2e8f0;' : 'text-align:center;'}`;
+                    td.innerHTML = cell;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+        })();
+        // Intersection Observer for fade-up animations
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+        // Counter animation
+        function animateCounter(el, target, duration = 1800) {
+            let start = 0; const step = target / (duration / 16);
+            const tick = () => { start += step; if (start >= target) { el.textContent = target.toLocaleString(); return; } el.textContent = Math.floor(start).toLocaleString(); requestAnimationFrame(tick); };
+            tick();
+        }
+        const counterObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const t = parseInt(e.target.dataset.target);
+                    if (t) animateCounter(e.target, t);
+                    counterObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
+
+        // Hero stat counters
+        document.querySelectorAll('.hero-stat-num[data-count]').forEach(el => {
+            const t = parseInt(el.dataset.count);
+            setTimeout(() => animateCounter(el, t, 2000), 800);
+        });
+
+        // ROI Bar animation
+        const barObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.querySelectorAll('.roi-bar-fill').forEach((bar, i) => {
+                        setTimeout(() => { bar.style.width = bar.dataset.width; }, i * 200);
+                    });
+                    barObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        document.querySelectorAll('.roi-bar-group').forEach(el => barObs.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
